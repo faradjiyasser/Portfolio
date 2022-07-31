@@ -1,0 +1,25 @@
+@use "../abstracts/index" as *;
+.row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+@for $i from 1 through 12{
+    .col-#{$i}{
+        width: 100% * $i / 12;
+        @if $i == 4 {
+            @include responsive(large){
+                width: 100% * 0.5;
+            }
+            @include responsive(medium){
+                width: 100% * 0.5;
+            }
+            @include responsive(small){
+                width: 100% *.5;
+            }
+            @include responsive(xsmall){
+                width: 100%;
+            }
+        }
+    }
+}

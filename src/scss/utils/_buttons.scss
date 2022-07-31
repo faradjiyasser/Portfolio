@@ -1,0 +1,16 @@
+.btn-default{
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: white;
+    background-color: #fad;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    &:hover{
+        background-color: rgb(255, 119, 201);
+    }
+    &:active{
+        background-color: rgb(255, 71, 181);
+    }
+}

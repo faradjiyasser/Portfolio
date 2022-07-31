@@ -1,0 +1,65 @@
+@use "../abstracts/index"as * ;
+.about{
+    position: relative;
+    top: -2rem;
+    @include responsive(small){
+        top: -2.5rem;
+    }
+    @include responsive(xsmall){
+        top: -3rem;
+    }
+    &__heading{
+        text-align: center;
+        font-size: 2.6rem;
+        line-height: 3rem;
+        @include responsive(large){
+            font-size: 2.4rem;
+            line-height: 3rem;
+        }
+        @include responsive(medium){
+            font-size: 2.2rem;
+            line-height: 3rem;
+        }
+        @include responsive(small){
+            font-size: 2rem;
+            line-height: 3rem;
+        }
+        @include responsive(xsmall){
+            font-size: 1.8rem;
+            line-height: 3rem;
+        }
+    }
+    &__paragraph{
+        max-width: 100%;
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        padding: 1rem 1.6rem;
+        letter-spacing: .1rem;
+        color: grey;
+        text-align: center;
+        @include responsive(large){
+            font-size: 1.5rem;
+            line-height: 2.7rem;
+            padding: 1rem 1.6rem;
+            letter-spacing: .1rem;
+        }
+        @include responsive(medium){
+            font-size: 1.4rem;
+            line-height: 2.6rem;
+            padding: 1rem 1.6rem;
+            letter-spacing: .1rem;
+        }
+        @include responsive(small){
+            font-size: 1.3rem;
+            line-height: 2.5rem;
+            padding: 1rem 1.6rem;
+            letter-spacing: .1rem;
+        }
+        @include responsive(xsmall){
+            font-size: 1.2rem;
+            line-height: 2.4rem;
+            padding: 1rem 1.6rem;
+            letter-spacing: .1rem;
+        }
+    }
+}

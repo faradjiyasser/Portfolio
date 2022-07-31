@@ -1,0 +1,111 @@
+@use "../abstracts/index"as*;
+.menu{
+    display: none;
+    padding: .6rem;
+    transition: all .15s linear;
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover{
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    @include responsive(large){
+        display: none;
+    }
+    @include responsive(small){
+        display: flex;
+    }
+    &__icon{
+        width: 2rem;
+        height: 1.4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 11;
+        
+        &__child1{
+            width: 100%;
+            height: 2px;
+            background-color: white;
+        }
+        &__child2{
+            width: 100%;
+            height: 2px;
+            background-color: white;
+        }
+        &__child3{
+            width: 100%;
+            height: 2px;
+            background-color: white;
+        }
+    }
+    &__list{
+        cursor: default;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5rem;
+        top: 0;
+        background: linear-gradient(0deg, rgba(37,41,42,1) 0%, rgba(60,54,58,1) 25%, rgba(124,82,94,1) 50%, rgba(252,181,56,1) 100%);
+        width: 60%;
+        height: 100%;
+        // right :00 ; to display
+        right: 0%;
+        overflow: hidden;
+        transition: all .3s ease-in;
+        z-index: 10;
+
+        @include responsive(large){
+                        
+        }
+        @include responsive(medium){
+            
+        }
+        @include responsive(small){
+            
+        }
+        @include responsive(xsmall){
+            width: 60%;
+        }
+        &__items{
+            width: 100%;
+            line-height: 4rem;
+            list-style: none;
+            &__link{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                li{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 0 1rem;
+                    cursor: pointer;
+                    width: 100%;
+                    margin: 1rem 0;
+                    text-decoration: none;
+                    transition: all .15s linear;
+                    border-radius: 4px;
+                    color: white;
+                    
+                    &:hover{
+                        background-color: rgba(255, 255, 255, 0.2);
+                    }
+                }
+            }
+            
+        }
+    }
+    &__full{
+        position: fixed;
+        cursor: default;
+        width: 100%;
+        height: 0;
+        z-index: 9;
+        background: linear-gradient(0deg, rgba(37,41,42,1) 0%, rgba(60,54,58,1) 25%, rgba(124,82,94,.3) 50%, rgba(252,181,56,.3) 100%);
+        top: 0;
+        right: 0;
+        transition: all .3s ease-in;
+    }
+}

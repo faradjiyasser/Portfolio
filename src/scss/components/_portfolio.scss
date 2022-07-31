@@ -1,0 +1,232 @@
+@use "../abstracts/index" as *;
+.portfolio{
+    position: relative;
+    top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(37,41,42,.5) 0%, rgba(60,54,58,.5) 25%, rgba(124,82,94,.2) 50%, rgba(252,181,56,.2) 100%);
+
+    padding: 8rem;
+    @include responsive(large){
+        padding:6rem 4rem;
+    }
+    @include responsive(medium){
+        padding: 4rem 2rem;
+    }
+    @include responsive(small){
+        padding: 4rem 1rem;
+    }
+    @include responsive(xsmall){
+        padding: 4rem 0;
+    }
+    &__heading{
+        text-align: center;
+        font-size: 2.6rem;
+        line-height: 3rem;
+        @include responsive(large){
+            font-size: 2.4rem;
+            line-height: 3rem;
+        }
+        @include responsive(medium){
+            font-size: 2.2rem;
+            line-height: 3rem;
+        }
+        @include responsive(small){
+            font-size: 2rem;
+            line-height: 3rem;
+        }
+        @include responsive(xsmall){
+            font-size: 1.8rem;
+            line-height: 3rem;
+        }
+    }  
+    &__categories{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 1rem 0;
+        
+        &__icon{
+            margin:  2rem;
+            background-color: $deep-taupe-50;
+            padding: 1rem 1.2rem;
+            clip-path: circle(50% at 50% 50%);
+            cursor: pointer;
+            transition: all .1s linear;
+            &:hover{
+                transform: scale(1.1);
+            }
+            @include responsive(large){
+                margin: 1.8rem;
+                padding: .9rem 1.1rem;
+            }
+            @include responsive(medium){
+                margin: 1.6rem;
+                padding: .8rem 1rem;
+            }
+            @include responsive(small){
+                margin: 1.4rem;
+                padding: .7rem .9rem;
+            }
+            @include responsive(xsmall){
+                margin: 1.2rem;
+                padding: .6rem .8rem;
+            }
+        }
+    }
+    &__card{
+        width: 100%;
+        
+        position: relative;
+        justify-content: center;
+        &__img{
+            display: flex;
+            width: 100%;
+            height: 40rem;
+            overflow: hidden;
+            padding: 5%;
+            padding-left: 0;
+            
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &__layer{
+            display: flex;
+            position: absolute;
+            height: 78%;
+            width:80%;
+            left: 7.5%;
+            top: 11%;
+            justify-content: center;
+            align-items: center;
+            padding: 5%;
+            z-index: 1;
+            transition: all .3s linear;
+            cursor: pointer;
+            opacity: 0;
+            transform: scale(1.2);
+            &:hover{
+                opacity: 1;
+                transform: scale(1.1);
+                background: $honey-yellow2;
+            }
+            &__content{
+                display: flex;
+                width: 100%;
+                height: 100%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                &__text{
+                    margin: 2rem;
+                    font-size: 2rem;
+                    font-weight: 600;
+                    line-height: 2rem;
+                }
+                &__icons{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row;
+                    &__icon{
+                        &:hover{
+                            transform: scale(1.2);
+                            color: $honey-yellow3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__modal{
+        width: 100%;
+        
+        position: relative;
+        justify-content: center;
+        &__img{
+            display: flex;
+            width: 100%;
+            height: 35rem;
+            overflow: hidden;
+            padding: 5%;
+            padding-left: 0;
+            @include responsive(large){
+                width: 100%;
+                height: 35rem;
+            }
+            @include responsive(medium){
+                width: 100%;
+                height: 30rem;
+            }
+            @include responsive(small){
+                width: 100%;
+                height: 25rem;
+            }
+            @include responsive(xsmall){
+                width: 100%;
+                height: 20rem;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &__layer{
+            display: flex;
+            position: absolute;
+            height: 78%;
+            width:80%;
+            left: 7.5%;
+            top: 11%;
+            justify-content: center;
+            align-items: center;
+            padding: 5%;
+            z-index: 1;
+            transition: all .3s linear;
+            cursor: pointer;
+            opacity: 0;
+            transform: scale(1.2);
+            &:hover{
+                opacity: 1;
+                transform: scale(1.1);
+                background: $honey-yellow2;
+            }
+            &__content{
+                display: flex;
+                width: 100%;
+                height: 100%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                &__text{
+                    margin: 2rem;
+                    font-size: 2rem;
+                    font-weight: 600;
+                    line-height: 2rem;
+                }
+                &__icons{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row;
+                    &__icon{
+                        &:hover{
+                            transform: scale(1.2);
+                            color: $honey-yellow3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+@use "./scss/abstracts/index";
+@use "./scss/base/base";
+@use "./scss/base/breakpoints";
+@use "./scss/layout/layout";
+@use "./scss/utils/buttons";
+@use "./scss/utils/utils";
+@use "./scss/base/animation";
+
+
+//components
+@use "./scss/components/nav";
+@use "./scss/components/header";
+@use "./scss/components/menu.scss";
+@use "./scss/components/about";
+@use "./scss/components/portfolio";
+@use "./scss/components/lightbox";
+@use "./scss/components/footer";
+
+
+
